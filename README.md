@@ -5,4 +5,4 @@ Mostly based on the [great template](https://git.webis.de/code-generic/code-webi
 
 
 ## Building
-Run `latexmk -pdf` in the root folder or use your favourite text editor extension that uses it.
+Run `latexmk -pdf` in the root folder.
