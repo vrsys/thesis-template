@@ -49,6 +49,7 @@
 %% - ifpdf
 %% - ifthen
 %% - inputenc
+%% - siunitx
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -65,6 +66,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage{ifpdf}
 \RequirePackage{ifthen}
+\RequirePackage{siunitx}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,6 +121,11 @@
   \germanlongdate%
   %\renewcommand{\dateseparator}{.}%
   \renewcommand{\formatdateshort}[3]{\twodigit{#1}.\twodigit{#2}.#3}%
+}{}
+% SI units
+\sisetup{detect-all,per-mode=symbol}
+\ifthenelse{\equal{\documentlanguage}{ngerman}}{%
+  \sisetup{locale=DE}%
 }{}
 
 
